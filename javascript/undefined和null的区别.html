@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<script>
+		var a;
+		var b=null;
+		document.write(typeof a+typeof b);
+		//null和undefined是相等的值但是 类型不同
+		document.write(null==undefined+"<br>");
+		//===，当数据值和类型完全一样时返回true
+		document.write(null===undefined);
+		
+		/*双等号==比较的规则：
+			1、对象和字符串的比较，对象都会转换为字符串。
+			2、null只和undefined、null本身相等，和其他值都不相等，即为false。
+			3、NaN和谁（包括它自己）都不相等（false）。
+			4、剩下的情况都是两边转换为数字进行比较的。
+		*/
+	</script>
+</head>
+
+<body>
+</body>
+</html>

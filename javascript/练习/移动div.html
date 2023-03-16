@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		#area{
+			width:80px;
+			height:80px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			let area = document.getElementById("area");
+			
+			document.onmousemove = function(event){
+				let x = event.pageX;
+				let y = event.pageY;
+				
+				let st = document.body.scrollTop;
+				console.log(st);
+				area.style.left = x+"px";
+				area.style.top = y+"px";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="area"></div>
+</body>
+</html>

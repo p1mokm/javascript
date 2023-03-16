@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<script>
+		window.onload = function(){
+			var all = document.getElementById("all");
+			//querySelector方法支持ie8，而getElementsByClassName方法不支持但效果一样,并且在有多个符合条件的元素情况下只会返回第一个元素
+			//querySelectorAll则可以返回符合条件的元素集合
+			var items = document.querySelectorAll(".items");
+			all.onclick = function(){
+				for(i=0;i<items.length;i++){
+					items[i].checked = true;
+				}
+			}	
+			var allnot = document.getElementById("allnot");
+			allnot.onclick = function(){
+				for(i=0;i<items.length;i++){
+					items[i].checked = false;
+				}
+			}
+			var invert = document.getElementById("invert");
+			invert.onclick = function(){
+				for(i=0;i<items.length;i++){
+					if(items[i].checked == false){
+						items[i].checked = true;
+					} else if(items[i].checked == true){
+						items[i].checked = false;
+					}
+				}
+			}
+			var submit = document.getElementById("submit");
+			submit.onclick = function(){
+				for(i=0;i<items.length;i++){
+					if(items[i].checked == true){
+						alert(items[i].id);
+					}
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	你爱好的运动是？<input type="checkbox" class="items">全选/全不选<br/>
+	<input type="checkbox" id="soccer" class="items">足球
+	<input type="checkbox" id="basketball" class="items">篮球
+	<input type="checkbox" id="badminton" class="items">羽毛球
+	<input type="checkbox" id="tabletennis" class="items">乒乓球
+	<br/>
+	<button id="all">全选</button>
+	<button id="allnot">全不选</button>
+	<button id="invert">反选</button>
+	<input type="submit" name="提交" id="submit">
+</body>
+</html>

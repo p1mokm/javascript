@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      window.onload = function (){
+          let para = document.createElement("p");
+          let node = document.createTextNode("这是一个新的段落");
+          para.appendChild(node);
+
+          let element = document.getElementById("div1");
+          // element.appendChild(para);
+          let child = document.getElementById("p1");
+          //将para节点对应的新元素插入到id为p1元素的前面
+          //element.insertBefore(para,child);
+          //通过元素的一个父元素，来移除该元素
+          //element.removeChild(child);
+          //将para节点对应的新元素来替代p1元素
+          element.replaceChild(para,child);
+      }
+    </script>
+</head>
+<body>
+    <div id="div1">
+      <p id="p1">这是第一个段落</p>
+      <p id="p2">这是第二个段落</p>
+    </div>
+</body>
+</html>

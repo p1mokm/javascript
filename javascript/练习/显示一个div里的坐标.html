@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		#areaDiv{
+			border:solid #000000 1px;
+			width: 200px;
+			height: 100px;
+		}
+		#showMsg{
+			border:solid #000000 1px;
+			width:200px;
+			height: 50px;
+		}
+	</style>
+
+	<script>
+		window.onload = function(){
+			let areaDiv = document.getElementById("areaDiv");
+			let showMsg = document.getElementById("showMsg");
+			areaDiv.onmousemove = function(event){
+				let x = event.clientX;
+				let y = event.clientY;
+				showMsg.innerHTML = "x="+x+" y="+y;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="areaDiv"></div><br/>
+	<div id="showMsg"></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      window.onload = function(){
+        // let text = '{"sites":['+
+        //         '{"name":"Runoob","url:"www.runoob,com"},'+
+        //         '{"name":"Gogle"","url":"www.google,com"},'+
+        //         '{"name":"Taobao","url":"www.taobao.com"}]}';
+        // let obj = JSON.stringify(text);
+        // let text2 = JSON.parse(obj);
+        // console.log(obj);
+        // console.log(text2);
+        //document.getElementById("demo").innerHTML = text.sites[1].name + ' ' + text.sites[1].url;
+      }
+      window.onload = function (){
+        let text ={
+          "a":12,
+          "c":"str"
+        };
+        let obj = JSON.stringify(text);
+        let obj2 = JSON.parse(obj);
+        console.log(text);
+        console.log(typeof text); //text和obj2是一样的，写出来就是一个JSON而不是String类型
+        console.log(obj);
+        console.log(typeof obj);
+        console.log(obj2);
+        console.log(typeof obj2);
+      }
+    </script>
+</head>
+<body>
+  <p id="demo">1</p>
+</body>
+</html>

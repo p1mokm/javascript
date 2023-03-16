@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      //let myFunction = new Function("a","b","a*b");
+      //alert(myFunction(3,4));
+      var myFunction1 = function (a,b){
+          return a*b;
+      };
+      console.log(myFunction1(3,4));
+      function myFunction2(a,b){
+           return a*b+1;
+      }
+      let a = myFunction2(3,4);
+      console.log(a);
+
+      //arguments传递调用的实际参数个数
+      function myfunction3(a,b){
+          console.log(a+b);
+          return arguments.length;
+      }
+      let b = myfunction3(1,2,3);
+      console.log("myFunction3参数为："+b);
+
+      //ES6新增的箭头函数
+      let c = (a,b)=>{
+          return a+b;
+      }
+      console.log("c="+c(1,2));
+    </script>
+</body>
+</html>

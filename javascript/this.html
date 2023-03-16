@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn1">点击我就消失了</button>
+    <script>
+      //单独使用则this表示全局对象
+      console.log(this);
+      //在函数中调用this，显示的是window对象
+      let a = (a,b)=>{
+        return this;
+      }
+      console.log(a(1,2));
+
+      let person = {
+        firstName:"John",
+        lastName:"Doe",
+        id:5566,
+        //箭头函数没有this所以该函数调用时时undefined
+        //箭头函数表达式的语法比函数表达式更简洁，并且没有自己的this，arguments，super或new.target
+        // fullName:()=>{
+        //   return this.firstName+""+this.lastName;
+        // }
+        fullName:function (){
+          return this.firstName+""+this.lastName;
+        }
+      }
+      console.log(person.fullName());
+
+      let aButton = document.getElementById("btn1");
+      aButton.onclick = function (){
+          console.log("该按钮事件里的this="+this);
+          this.style.display="none";
+      }
+    </script>
+</body>
+</html>

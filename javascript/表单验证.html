@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      window.onload = function (){
+        let submit = document.getElementById("submit");
+        submit.onclick = function (){
+          let x= document.forms["myForm"]["fname"].value;
+          if(x==null || x==""){
+            alert("不能为空");
+          }
+        }
+      }
+    </script>
+</head>
+<body>
+  <form name="myForm">
+    姓名： <input type="text" name="fname">
+          <input type="submit" value="提交" id="submit">
+  </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (){
+            //getElementsByTagName()方法返回的是一个HTMLcollection对象
+            // HTMLCollection 看起来可能是一个数组，但其实不是。
+            // 你可以像数组一样，使用索引来获取元素。
+            // HTMLCollection 无法使用数组的方法： valueOf(), pop(), push(), 或 join() 。
+            let p_list = document.getElementsByTagName("p");
+            console.log(p_list.length);
+            for(i=0;i<p_list.length;i++){
+                console.log(p_list[i]);
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>第一个段落</p>
+    <p>第二个段落</p>
+    <p>第三个段落</p>
+</body>
+</html>

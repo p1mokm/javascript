@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Dog{
+            constructor(name,color){
+                this.name=name;
+                this.color=color;
+            }
+            eat(){
+                console.log("小狗正在吃东西!!");
+            }
+            run(){
+                console.log("小狗正在跑步!!");
+            }
+        }
+        let puppy = new Dog("puppy","yellow");
+        puppy.eat();
+        puppy.run();
+        console.log(puppy.name+""+puppy.color);
+
+        class bigDog extends Dog{
+            shit(){
+                console.log("大狗在拉屎!!");
+            }
+        }
+        let AbigDoge = new bigDog("大狗","red");
+        AbigDoge.run();
+        console.log(AbigDoge.name);
+        // class Google{
+        //     constructor(name,url) {
+        //         this.name = name;
+        //         this.url = url;
+        //     }
+        // }
+        // let site = new Google("谷歌","www.google.com");
+        // console.log(site.name+" "+site.url);
+    </script>
+</body>
+</html>

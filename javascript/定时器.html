@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      //setTimeout()一段时间后执行 关闭回调函数clearTimeout
+      //   const timer = setTimeout(()=>{
+      //       alert("hello");
+      //   },3000);
+      //   clearTimeout(timer);
+      //setInterval每隔一段时间执行一次
+        // setInterval(()=>{
+        //   console.log("hello");
+        // },3000);
+
+      //定时器的本质就是在指定时间后将函数添加到消息队列中
+      console.time();
+      setTimeout(()=>{
+            console.timeEnd();
+            console.log("hello");
+      },3000);
+
+      //全局变量，使得全局变量在堆栈中在启动时启动{}6秒，而setTimeout()函数则在三秒后进入消息队列后再卡3秒，等该全局变量从堆栈中出来后才进入
+      const begin = Date.now();
+        while(Date.now()-begin<6000){};
+    </script>
+</body>
+</html>

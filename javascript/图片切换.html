@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		img{
+			width: 200px;
+			height: 200px;
+			margin: 50px;
+		}
+		div.image{
+			background-color: beige;
+			margin: 50px auto;
+			height:300px;
+			width: 300px;
+		}
+		div button{
+			position: relative;
+			bottom:40px;
+			left:100px;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var button1 = document.getElementById("last");
+			var button2 = document.getElementById("next");
+			
+			var img = document.getElementsByTagName("img")[0];
+			var imglist = ["img/dark.png","img/light.png","img/tysq.png"]
+			
+			var index = 0;
+			button1.onclick = function(){
+				index--;
+				if(index<0){
+					index=imglist.length-1;
+				}
+				img.src=imglist[index];
+			}
+			button2.onclick = function(){
+				index++;
+				if(index>2){
+					index=0;
+				}
+				img.src=imglist[index];
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div class="image">
+		<img src="img/tysq.png"/>
+		<button id="last">上一张</button>
+		<button id="next">下一张</button>
+	</div>
+
+</body>
+</html>

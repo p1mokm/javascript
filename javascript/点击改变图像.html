@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		function changeImage(){
+			element=document.getElementById('myimage');
+			if(element.src.match("bulbon")){
+				element.src="light.png";
+			} else{
+				element.src="dark.png";
+			}
+		}
+	</script>
+	<img id="myimage" onClick="changeImage()" src="img/dark.png" width="100" height="180" alt="a light">
+</body>
+</html>
